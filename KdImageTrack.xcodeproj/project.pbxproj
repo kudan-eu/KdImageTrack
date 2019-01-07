@@ -1,0 +1,921 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BCB60F481DD1D747006C7892 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCE7BC6D1DD1C4D600CE43AE /* Cocoa.framework */; };
+		BCB60F4D1DD1DA7D006C7892 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BCB60F4B1DD1DA7A006C7892 /* main.cpp */; };
+		BCE7BC601DD1C3F300CE43AE /* UnitTestUtils.hpp in Headers */ = {isa = PBXBuildFile; fileRef = BCE7BC581DD1C3F300CE43AE /* UnitTestUtils.hpp */; };
+		BCE7BC611DD1C41E00CE43AE /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BCE7BC511DD1C3F300CE43AE /* main.cpp */; };
+		BCE7BC631DD1C41E00CE43AE /* Test_KudanCameraParameters.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BCE7BC531DD1C3F300CE43AE /* Test_KudanCameraParameters.cpp */; };
+		BCE7BC641DD1C41E00CE43AE /* Test_KudanImageTrackable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BCE7BC541DD1C3F300CE43AE /* Test_KudanImageTrackable.cpp */; };
+		BCE7BC651DD1C41E00CE43AE /* Test_KudanImageTracker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BCE7BC551DD1C3F300CE43AE /* Test_KudanImageTracker.cpp */; };
+		BCE7BC661DD1C41E00CE43AE /* Test_KudanMaths.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BCE7BC561DD1C3F300CE43AE /* Test_KudanMaths.cpp */; };
+		BCE7BC671DD1C41E00CE43AE /* UnitTestUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BCE7BC571DD1C3F300CE43AE /* UnitTestUtils.cpp */; };
+		BCE7BC6A1DD1C4B400CE43AE /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCE7BC691DD1C4B400CE43AE /* CoreVideo.framework */; };
+		BCE7BC6C1DD1C4C700CE43AE /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCE7BC6B1DD1C4C700CE43AE /* QTKit.framework */; };
+		BCE7BC6E1DD1C4D600CE43AE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCE7BC6D1DD1C4D600CE43AE /* Cocoa.framework */; };
+		E2D5EDF721DCE80600174F4F /* lego.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = E2D5EDF621DCE7F300174F4F /* lego.jpg */; };
+		E2D5EDF821DCE80600174F4F /* On Fire.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = E2D5EDF521DCE7F300174F4F /* On Fire.jpg */; };
+		E2D5EDFF21E369E900174F4F /* KdImageTrack.h in Headers */ = {isa = PBXBuildFile; fileRef = E2D5EDFD21E369E900174F4F /* KdImageTrack.h */; };
+		E2D5EE0021E369E900174F4F /* KdImageTrack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2D5EDFE21E369E900174F4F /* KdImageTrack.cpp */; };
+		E2D5EE0521E369FB00174F4F /* IntelSSE_x86.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E2D5EE0121E369FB00174F4F /* IntelSSE_x86.hpp */; };
+		E2D5EE0621E369FB00174F4F /* asm32.S in Sources */ = {isa = PBXBuildFile; fileRef = E2D5EE0221E369FB00174F4F /* asm32.S */; };
+		E2D5EE0721E369FB00174F4F /* IntelSSE_x86.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2D5EE0321E369FB00174F4F /* IntelSSE_x86.cpp */; };
+		E2D5EE0821E369FB00174F4F /* asm64.S in Sources */ = {isa = PBXBuildFile; fileRef = E2D5EE0421E369FB00174F4F /* asm64.S */; };
+		E2D5EE3121E36A1900174F4F /* Profiler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2D5EE0921E36A1700174F4F /* Profiler.cpp */; };
+		E2D5EE3221E36A1900174F4F /* CameraImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2D5EE0A21E36A1700174F4F /* CameraImage.cpp */; };
+		E2D5EE3321E36A1900174F4F /* MarkerDetector.h in Headers */ = {isa = PBXBuildFile; fileRef = E2D5EE0B21E36A1700174F4F /* MarkerDetector.h */; };
+		E2D5EE3421E36A1900174F4F /* Geometry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2D5EE0C21E36A1700174F4F /* Geometry.cpp */; };
+		E2D5EE3521E36A1900174F4F /* ImageProcessing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2D5EE0D21E36A1700174F4F /* ImageProcessing.cpp */; };
+		E2D5EE3621E36A1900174F4F /* Logging.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2D5EE0E21E36A1700174F4F /* Logging.cpp */; };
+		E2D5EE3721E36A1900174F4F /* DebugState.h in Headers */ = {isa = PBXBuildFile; fileRef = E2D5EE0F21E36A1700174F4F /* DebugState.h */; };
+		E2D5EE3821E36A1900174F4F /* Homography.h in Headers */ = {isa = PBXBuildFile; fileRef = E2D5EE1021E36A1700174F4F /* Homography.h */; };
+		E2D5EE3921E36A1900174F4F /* PoseEstimator.h in Headers */ = {isa = PBXBuildFile; fileRef = E2D5EE1121E36A1700174F4F /* PoseEstimator.h */; };
+		E2D5EE3A21E36A1900174F4F /* CameraImage.h in Headers */ = {isa = PBXBuildFile; fileRef = E2D5EE1221E36A1700174F4F /* CameraImage.h */; };
+		E2D5EE3B21E36A1900174F4F /* Helper.h in Headers */ = {isa = PBXBuildFile; fileRef = E2D5EE1321E36A1700174F4F /* Helper.h */; };
+		E2D5EE3C21E36A1900174F4F /* CameraCalibration.h in Headers */ = {isa = PBXBuildFile; fileRef = E2D5EE1421E36A1700174F4F /* CameraCalibration.h */; };
+		E2D5EE3D21E36A1900174F4F /* MarkerImage.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E2D5EE1521E36A1700174F4F /* MarkerImage.hpp */; };
+		E2D5EE3E21E36A1900174F4F /* TrackedMarker.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E2D5EE1621E36A1700174F4F /* TrackedMarker.hpp */; };
+		E2D5EE3F21E36A1900174F4F /* Logging.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E2D5EE1721E36A1700174F4F /* Logging.hpp */; };
+		E2D5EE4021E36A1900174F4F /* DoubleExponentialSmoothing.h in Headers */ = {isa = PBXBuildFile; fileRef = E2D5EE1821E36A1700174F4F /* DoubleExponentialSmoothing.h */; };
+		E2D5EE4121E36A1900174F4F /* MarkerDetectorResult.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2D5EE1921E36A1700174F4F /* MarkerDetectorResult.cpp */; };
+		E2D5EE4221E36A1900174F4F /* PlanarTracker.h in Headers */ = {isa = PBXBuildFile; fileRef = E2D5EE1A21E36A1800174F4F /* PlanarTracker.h */; };
+		E2D5EE4321E36A1900174F4F /* MarkerDetectorResult.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E2D5EE1B21E36A1800174F4F /* MarkerDetectorResult.hpp */; };
+		E2D5EE4421E36A1900174F4F /* Macros.h in Headers */ = {isa = PBXBuildFile; fileRef = E2D5EE1C21E36A1800174F4F /* Macros.h */; };
+		E2D5EE4521E36A1900174F4F /* Marker.h in Headers */ = {isa = PBXBuildFile; fileRef = E2D5EE1D21E36A1800174F4F /* Marker.h */; };
+		E2D5EE4621E36A1900174F4F /* OpticalFlowTracker.h in Headers */ = {isa = PBXBuildFile; fileRef = E2D5EE1E21E36A1800174F4F /* OpticalFlowTracker.h */; };
+		E2D5EE4721E36A1900174F4F /* OpticalFlowTracker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2D5EE1F21E36A1800174F4F /* OpticalFlowTracker.cpp */; };
+		E2D5EE4821E36A1900174F4F /* Profiler.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E2D5EE2021E36A1800174F4F /* Profiler.hpp */; };
+		E2D5EE4921E36A1900174F4F /* HomographyFinding.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2D5EE2121E36A1800174F4F /* HomographyFinding.cpp */; };
+		E2D5EE4A21E36A1900174F4F /* PoseEstimator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2D5EE2221E36A1800174F4F /* PoseEstimator.cpp */; };
+		E2D5EE4B21E36A1900174F4F /* ImagePoints.h in Headers */ = {isa = PBXBuildFile; fileRef = E2D5EE2321E36A1800174F4F /* ImagePoints.h */; };
+		E2D5EE4C21E36A1900174F4F /* PatchMatcher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2D5EE2421E36A1800174F4F /* PatchMatcher.cpp */; };
+		E2D5EE4D21E36A1900174F4F /* Marker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2D5EE2521E36A1800174F4F /* Marker.cpp */; };
+		E2D5EE4E21E36A1900174F4F /* MarkerDetector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2D5EE2621E36A1800174F4F /* MarkerDetector.cpp */; };
+		E2D5EE4F21E36A1900174F4F /* ImagePoints.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2D5EE2721E36A1800174F4F /* ImagePoints.cpp */; };
+		E2D5EE5021E36A1900174F4F /* PatchMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = E2D5EE2821E36A1800174F4F /* PatchMatcher.h */; };
+		E2D5EE5121E36A1900174F4F /* PlanarTracker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2D5EE2921E36A1800174F4F /* PlanarTracker.cpp */; };
+		E2D5EE5221E36A1900174F4F /* TrackedMarker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2D5EE2A21E36A1900174F4F /* TrackedMarker.cpp */; };
+		E2D5EE5321E36A1900174F4F /* Homography.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2D5EE2B21E36A1900174F4F /* Homography.cpp */; };
+		E2D5EE5421E36A1900174F4F /* Helper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2D5EE2C21E36A1900174F4F /* Helper.cpp */; };
+		E2D5EE5521E36A1900174F4F /* DoubleExponentialSmoothing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2D5EE2D21E36A1900174F4F /* DoubleExponentialSmoothing.cpp */; };
+		E2D5EE5621E36A1900174F4F /* ImageProcessing.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E2D5EE2E21E36A1900174F4F /* ImageProcessing.hpp */; };
+		E2D5EE5721E36A1900174F4F /* Geometry.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E2D5EE2F21E36A1900174F4F /* Geometry.hpp */; };
+		E2D5EE5821E36A1900174F4F /* HomographyFinding.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E2D5EE3021E36A1900174F4F /* HomographyFinding.hpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BC00F9911E6D505F00190B80 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 529C75321B285FD9003C38C7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BCF8ED331D9E9D8C005074F4;
+			remoteInfo = "KudanCV-Docs";
+		};
+		BC71E9431D915344004DCA90 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 529C75321B285FD9003C38C7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BC71E9001D9141A5004DCA90;
+			remoteInfo = "KudanCV-OSX";
+		};
+		BC71E95E1D92F2F8004DCA90 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 529C75321B285FD9003C38C7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BC71E9001D9141A5004DCA90;
+			remoteInfo = "KudanCV-OSX";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BC71E92C1D914995004DCA90 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = Markers;
+			dstSubfolderSpec = 16;
+			files = (
+				E2D5EDF721DCE80600174F4F /* lego.jpg in CopyFiles */,
+				E2D5EDF821DCE80600174F4F /* On Fire.jpg in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC71E9391D91505B004DCA90 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		BC71E9011D9141A5004DCA90 /* libKdImageTrack-macOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libKdImageTrack-macOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC71E92E1D914995004DCA90 /* Demo-macOS */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Demo-macOS"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC71E93B1D91505B004DCA90 /* IntegrationTests */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = IntegrationTests; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCB60F4B1DD1DA7A006C7892 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = "Demo-macOS/main.cpp"; sourceTree = "<group>"; };
+		BCE7BC511DD1C3F300CE43AE /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = IntegrationTests/main.cpp; sourceTree = SOURCE_ROOT; };
+		BCE7BC531DD1C3F300CE43AE /* Test_KudanCameraParameters.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Test_KudanCameraParameters.cpp; path = IntegrationTests/Test_KudanCameraParameters.cpp; sourceTree = SOURCE_ROOT; };
+		BCE7BC541DD1C3F300CE43AE /* Test_KudanImageTrackable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Test_KudanImageTrackable.cpp; path = IntegrationTests/Test_KudanImageTrackable.cpp; sourceTree = SOURCE_ROOT; };
+		BCE7BC551DD1C3F300CE43AE /* Test_KudanImageTracker.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Test_KudanImageTracker.cpp; path = IntegrationTests/Test_KudanImageTracker.cpp; sourceTree = SOURCE_ROOT; };
+		BCE7BC561DD1C3F300CE43AE /* Test_KudanMaths.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Test_KudanMaths.cpp; path = IntegrationTests/Test_KudanMaths.cpp; sourceTree = SOURCE_ROOT; };
+		BCE7BC571DD1C3F300CE43AE /* UnitTestUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = UnitTestUtils.cpp; path = IntegrationTests/UnitTestUtils.cpp; sourceTree = SOURCE_ROOT; };
+		BCE7BC581DD1C3F300CE43AE /* UnitTestUtils.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = UnitTestUtils.hpp; path = IntegrationTests/UnitTestUtils.hpp; sourceTree = SOURCE_ROOT; };
+		BCE7BC691DD1C4B400CE43AE /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/CoreVideo.framework; sourceTree = DEVELOPER_DIR; };
+		BCE7BC6B1DD1C4C700CE43AE /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/QTKit.framework; sourceTree = DEVELOPER_DIR; };
+		BCE7BC6D1DD1C4D600CE43AE /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		BCF8ED381D9EB0DE005074F4 /* KudanImageTrack.dox */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = KudanImageTrack.dox; path = Docs/KudanImageTrack.dox; sourceTree = SOURCE_ROOT; };
+		BCF8ED3A1D9EBC06005074F4 /* KudanImageTrackDocsStyle.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = KudanImageTrackDocsStyle.css; path = Docs/KudanImageTrackDocsStyle.css; sourceTree = SOURCE_ROOT; };
+		BCF8ED3B1D9EBEA8005074F4 /* KudanImageTrack.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = KudanImageTrack.html; path = Docs/KudanImageTrack.html; sourceTree = SOURCE_ROOT; };
+		E2D5EDF421DCDB4A00174F4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Demo-macOS/Info.plist"; sourceTree = "<group>"; };
+		E2D5EDF521DCE7F300174F4F /* On Fire.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "On Fire.jpg"; path = "Demo-macOS/Markers/On Fire.jpg"; sourceTree = "<group>"; };
+		E2D5EDF621DCE7F300174F4F /* lego.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = lego.jpg; path = "Demo-macOS/Markers/lego.jpg"; sourceTree = "<group>"; };
+		E2D5EDFD21E369E900174F4F /* KdImageTrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KdImageTrack.h; path = KdImageTrack/KdImageTrack.h; sourceTree = SOURCE_ROOT; };
+		E2D5EDFE21E369E900174F4F /* KdImageTrack.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = KdImageTrack.cpp; path = KdImageTrack/KdImageTrack.cpp; sourceTree = SOURCE_ROOT; };
+		E2D5EE0121E369FB00174F4F /* IntelSSE_x86.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = IntelSSE_x86.hpp; path = KdImageTrack/IntelSSE_x86.hpp; sourceTree = SOURCE_ROOT; };
+		E2D5EE0221E369FB00174F4F /* asm32.S */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; name = asm32.S; path = KdImageTrack/asm32.S; sourceTree = SOURCE_ROOT; };
+		E2D5EE0321E369FB00174F4F /* IntelSSE_x86.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IntelSSE_x86.cpp; path = KdImageTrack/IntelSSE_x86.cpp; sourceTree = SOURCE_ROOT; };
+		E2D5EE0421E369FB00174F4F /* asm64.S */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; name = asm64.S; path = KdImageTrack/asm64.S; sourceTree = SOURCE_ROOT; };
+		E2D5EE0921E36A1700174F4F /* Profiler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Profiler.cpp; path = KdImageTrack/Profiler.cpp; sourceTree = SOURCE_ROOT; };
+		E2D5EE0A21E36A1700174F4F /* CameraImage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CameraImage.cpp; path = KdImageTrack/CameraImage.cpp; sourceTree = SOURCE_ROOT; };
+		E2D5EE0B21E36A1700174F4F /* MarkerDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MarkerDetector.h; path = KdImageTrack/MarkerDetector.h; sourceTree = SOURCE_ROOT; };
+		E2D5EE0C21E36A1700174F4F /* Geometry.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Geometry.cpp; path = KdImageTrack/Geometry.cpp; sourceTree = SOURCE_ROOT; };
+		E2D5EE0D21E36A1700174F4F /* ImageProcessing.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ImageProcessing.cpp; path = KdImageTrack/ImageProcessing.cpp; sourceTree = SOURCE_ROOT; };
+		E2D5EE0E21E36A1700174F4F /* Logging.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Logging.cpp; path = KdImageTrack/Logging.cpp; sourceTree = SOURCE_ROOT; };
+		E2D5EE0F21E36A1700174F4F /* DebugState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DebugState.h; path = KdImageTrack/DebugState.h; sourceTree = SOURCE_ROOT; };
+		E2D5EE1021E36A1700174F4F /* Homography.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Homography.h; path = KdImageTrack/Homography.h; sourceTree = SOURCE_ROOT; };
+		E2D5EE1121E36A1700174F4F /* PoseEstimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PoseEstimator.h; path = KdImageTrack/PoseEstimator.h; sourceTree = SOURCE_ROOT; };
+		E2D5EE1221E36A1700174F4F /* CameraImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CameraImage.h; path = KdImageTrack/CameraImage.h; sourceTree = SOURCE_ROOT; };
+		E2D5EE1321E36A1700174F4F /* Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Helper.h; path = KdImageTrack/Helper.h; sourceTree = SOURCE_ROOT; };
+		E2D5EE1421E36A1700174F4F /* CameraCalibration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CameraCalibration.h; path = KdImageTrack/CameraCalibration.h; sourceTree = SOURCE_ROOT; };
+		E2D5EE1521E36A1700174F4F /* MarkerImage.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = MarkerImage.hpp; path = KdImageTrack/MarkerImage.hpp; sourceTree = SOURCE_ROOT; };
+		E2D5EE1621E36A1700174F4F /* TrackedMarker.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = TrackedMarker.hpp; path = KdImageTrack/TrackedMarker.hpp; sourceTree = SOURCE_ROOT; };
+		E2D5EE1721E36A1700174F4F /* Logging.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Logging.hpp; path = KdImageTrack/Logging.hpp; sourceTree = SOURCE_ROOT; };
+		E2D5EE1821E36A1700174F4F /* DoubleExponentialSmoothing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DoubleExponentialSmoothing.h; path = KdImageTrack/DoubleExponentialSmoothing.h; sourceTree = SOURCE_ROOT; };
+		E2D5EE1921E36A1700174F4F /* MarkerDetectorResult.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MarkerDetectorResult.cpp; path = KdImageTrack/MarkerDetectorResult.cpp; sourceTree = SOURCE_ROOT; };
+		E2D5EE1A21E36A1800174F4F /* PlanarTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlanarTracker.h; path = KdImageTrack/PlanarTracker.h; sourceTree = SOURCE_ROOT; };
+		E2D5EE1B21E36A1800174F4F /* MarkerDetectorResult.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = MarkerDetectorResult.hpp; path = KdImageTrack/MarkerDetectorResult.hpp; sourceTree = SOURCE_ROOT; };
+		E2D5EE1C21E36A1800174F4F /* Macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Macros.h; path = KdImageTrack/Macros.h; sourceTree = SOURCE_ROOT; };
+		E2D5EE1D21E36A1800174F4F /* Marker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Marker.h; path = KdImageTrack/Marker.h; sourceTree = SOURCE_ROOT; };
+		E2D5EE1E21E36A1800174F4F /* OpticalFlowTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OpticalFlowTracker.h; path = KdImageTrack/OpticalFlowTracker.h; sourceTree = SOURCE_ROOT; };
+		E2D5EE1F21E36A1800174F4F /* OpticalFlowTracker.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = OpticalFlowTracker.cpp; path = KdImageTrack/OpticalFlowTracker.cpp; sourceTree = SOURCE_ROOT; };
+		E2D5EE2021E36A1800174F4F /* Profiler.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Profiler.hpp; path = KdImageTrack/Profiler.hpp; sourceTree = SOURCE_ROOT; };
+		E2D5EE2121E36A1800174F4F /* HomographyFinding.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HomographyFinding.cpp; path = KdImageTrack/HomographyFinding.cpp; sourceTree = SOURCE_ROOT; };
+		E2D5EE2221E36A1800174F4F /* PoseEstimator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PoseEstimator.cpp; path = KdImageTrack/PoseEstimator.cpp; sourceTree = SOURCE_ROOT; };
+		E2D5EE2321E36A1800174F4F /* ImagePoints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImagePoints.h; path = KdImageTrack/ImagePoints.h; sourceTree = SOURCE_ROOT; };
+		E2D5EE2421E36A1800174F4F /* PatchMatcher.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PatchMatcher.cpp; path = KdImageTrack/PatchMatcher.cpp; sourceTree = SOURCE_ROOT; };
+		E2D5EE2521E36A1800174F4F /* Marker.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Marker.cpp; path = KdImageTrack/Marker.cpp; sourceTree = SOURCE_ROOT; };
+		E2D5EE2621E36A1800174F4F /* MarkerDetector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MarkerDetector.cpp; path = KdImageTrack/MarkerDetector.cpp; sourceTree = SOURCE_ROOT; };
+		E2D5EE2721E36A1800174F4F /* ImagePoints.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ImagePoints.cpp; path = KdImageTrack/ImagePoints.cpp; sourceTree = SOURCE_ROOT; };
+		E2D5EE2821E36A1800174F4F /* PatchMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PatchMatcher.h; path = KdImageTrack/PatchMatcher.h; sourceTree = SOURCE_ROOT; };
+		E2D5EE2921E36A1800174F4F /* PlanarTracker.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PlanarTracker.cpp; path = KdImageTrack/PlanarTracker.cpp; sourceTree = SOURCE_ROOT; };
+		E2D5EE2A21E36A1900174F4F /* TrackedMarker.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TrackedMarker.cpp; path = KdImageTrack/TrackedMarker.cpp; sourceTree = SOURCE_ROOT; };
+		E2D5EE2B21E36A1900174F4F /* Homography.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Homography.cpp; path = KdImageTrack/Homography.cpp; sourceTree = SOURCE_ROOT; };
+		E2D5EE2C21E36A1900174F4F /* Helper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Helper.cpp; path = KdImageTrack/Helper.cpp; sourceTree = SOURCE_ROOT; };
+		E2D5EE2D21E36A1900174F4F /* DoubleExponentialSmoothing.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DoubleExponentialSmoothing.cpp; path = KdImageTrack/DoubleExponentialSmoothing.cpp; sourceTree = SOURCE_ROOT; };
+		E2D5EE2E21E36A1900174F4F /* ImageProcessing.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ImageProcessing.hpp; path = KdImageTrack/ImageProcessing.hpp; sourceTree = SOURCE_ROOT; };
+		E2D5EE2F21E36A1900174F4F /* Geometry.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Geometry.hpp; path = KdImageTrack/Geometry.hpp; sourceTree = SOURCE_ROOT; };
+		E2D5EE3021E36A1900174F4F /* HomographyFinding.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = HomographyFinding.hpp; path = KdImageTrack/HomographyFinding.hpp; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BC71E8FE1D9141A5004DCA90 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC71E92B1D914995004DCA90 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCE7BC6E1DD1C4D600CE43AE /* Cocoa.framework in Frameworks */,
+				BCE7BC6C1DD1C4C700CE43AE /* QTKit.framework in Frameworks */,
+				BCE7BC6A1DD1C4B400CE43AE /* CoreVideo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC71E9381D91505B004DCA90 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCB60F481DD1D747006C7892 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		529C75311B285FD9003C38C7 = {
+			isa = PBXGroup;
+			children = (
+				BCF8ED371D9EB0B2005074F4 /* Docs */,
+				529C753D1B285FD9003C38C7 /* KudanCV */,
+				BC71E93C1D91505B004DCA90 /* IntegrationTests */,
+				BCB60F4A1DD1DA5C006C7892 /* Demo-macOS */,
+				529C753C1B285FD9003C38C7 /* Products */,
+				BCE7BC681DD1C4B400CE43AE /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		529C753C1B285FD9003C38C7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BC71E9011D9141A5004DCA90 /* libKdImageTrack-macOS.a */,
+				BC71E92E1D914995004DCA90 /* Demo-macOS */,
+				BC71E93B1D91505B004DCA90 /* IntegrationTests */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		529C753D1B285FD9003C38C7 /* KudanCV */ = {
+			isa = PBXGroup;
+			children = (
+				529C75CE1B28642C003C38C7 /* API */,
+				529C75571B286043003C38C7 /* core */,
+			);
+			name = KudanCV;
+			path = KdImageTrack;
+			sourceTree = "<group>";
+		};
+		529C75571B286043003C38C7 /* core */ = {
+			isa = PBXGroup;
+			children = (
+				E2D5EE1421E36A1700174F4F /* CameraCalibration.h */,
+				E2D5EE0A21E36A1700174F4F /* CameraImage.cpp */,
+				E2D5EE1221E36A1700174F4F /* CameraImage.h */,
+				E2D5EE0F21E36A1700174F4F /* DebugState.h */,
+				E2D5EE2D21E36A1900174F4F /* DoubleExponentialSmoothing.cpp */,
+				E2D5EE1821E36A1700174F4F /* DoubleExponentialSmoothing.h */,
+				E2D5EE0C21E36A1700174F4F /* Geometry.cpp */,
+				E2D5EE2F21E36A1900174F4F /* Geometry.hpp */,
+				E2D5EE2C21E36A1900174F4F /* Helper.cpp */,
+				E2D5EE1321E36A1700174F4F /* Helper.h */,
+				E2D5EE2B21E36A1900174F4F /* Homography.cpp */,
+				E2D5EE1021E36A1700174F4F /* Homography.h */,
+				E2D5EE2121E36A1800174F4F /* HomographyFinding.cpp */,
+				E2D5EE3021E36A1900174F4F /* HomographyFinding.hpp */,
+				E2D5EE2721E36A1800174F4F /* ImagePoints.cpp */,
+				E2D5EE2321E36A1800174F4F /* ImagePoints.h */,
+				E2D5EE0D21E36A1700174F4F /* ImageProcessing.cpp */,
+				E2D5EE2E21E36A1900174F4F /* ImageProcessing.hpp */,
+				E2D5EE0E21E36A1700174F4F /* Logging.cpp */,
+				E2D5EE1721E36A1700174F4F /* Logging.hpp */,
+				E2D5EE1C21E36A1800174F4F /* Macros.h */,
+				E2D5EE2521E36A1800174F4F /* Marker.cpp */,
+				E2D5EE1D21E36A1800174F4F /* Marker.h */,
+				E2D5EE2621E36A1800174F4F /* MarkerDetector.cpp */,
+				E2D5EE0B21E36A1700174F4F /* MarkerDetector.h */,
+				E2D5EE1921E36A1700174F4F /* MarkerDetectorResult.cpp */,
+				E2D5EE1B21E36A1800174F4F /* MarkerDetectorResult.hpp */,
+				E2D5EE1521E36A1700174F4F /* MarkerImage.hpp */,
+				E2D5EE1F21E36A1800174F4F /* OpticalFlowTracker.cpp */,
+				E2D5EE1E21E36A1800174F4F /* OpticalFlowTracker.h */,
+				E2D5EE2421E36A1800174F4F /* PatchMatcher.cpp */,
+				E2D5EE2821E36A1800174F4F /* PatchMatcher.h */,
+				E2D5EE2921E36A1800174F4F /* PlanarTracker.cpp */,
+				E2D5EE1A21E36A1800174F4F /* PlanarTracker.h */,
+				E2D5EE2221E36A1800174F4F /* PoseEstimator.cpp */,
+				E2D5EE1121E36A1700174F4F /* PoseEstimator.h */,
+				E2D5EE0921E36A1700174F4F /* Profiler.cpp */,
+				E2D5EE2021E36A1800174F4F /* Profiler.hpp */,
+				E2D5EE2A21E36A1900174F4F /* TrackedMarker.cpp */,
+				E2D5EE1621E36A1700174F4F /* TrackedMarker.hpp */,
+				647918671DF1D33100585A5C /* Optimisations */,
+			);
+			name = core;
+			sourceTree = "<group>";
+		};
+		529C75CE1B28642C003C38C7 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				E2D5EDFE21E369E900174F4F /* KdImageTrack.cpp */,
+				E2D5EDFD21E369E900174F4F /* KdImageTrack.h */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+		647918671DF1D33100585A5C /* Optimisations */ = {
+			isa = PBXGroup;
+			children = (
+				E2D5EE0221E369FB00174F4F /* asm32.S */,
+				E2D5EE0421E369FB00174F4F /* asm64.S */,
+				E2D5EE0321E369FB00174F4F /* IntelSSE_x86.cpp */,
+				E2D5EE0121E369FB00174F4F /* IntelSSE_x86.hpp */,
+			);
+			name = Optimisations;
+			sourceTree = "<group>";
+		};
+		BC71E93C1D91505B004DCA90 /* IntegrationTests */ = {
+			isa = PBXGroup;
+			children = (
+				BCE7BC511DD1C3F300CE43AE /* main.cpp */,
+				BCE7BC531DD1C3F300CE43AE /* Test_KudanCameraParameters.cpp */,
+				BCE7BC541DD1C3F300CE43AE /* Test_KudanImageTrackable.cpp */,
+				BCE7BC551DD1C3F300CE43AE /* Test_KudanImageTracker.cpp */,
+				BCE7BC561DD1C3F300CE43AE /* Test_KudanMaths.cpp */,
+				BCE7BC571DD1C3F300CE43AE /* UnitTestUtils.cpp */,
+				BCE7BC581DD1C3F300CE43AE /* UnitTestUtils.hpp */,
+			);
+			path = IntegrationTests;
+			sourceTree = "<group>";
+		};
+		BCB60F4A1DD1DA5C006C7892 /* Demo-macOS */ = {
+			isa = PBXGroup;
+			children = (
+				E2D5EDF621DCE7F300174F4F /* lego.jpg */,
+				E2D5EDF521DCE7F300174F4F /* On Fire.jpg */,
+				BCB60F4B1DD1DA7A006C7892 /* main.cpp */,
+				E2D5EDF421DCDB4A00174F4F /* Info.plist */,
+			);
+			name = "Demo-macOS";
+			sourceTree = "<group>";
+		};
+		BCE7BC681DD1C4B400CE43AE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BCE7BC6D1DD1C4D600CE43AE /* Cocoa.framework */,
+				BCE7BC6B1DD1C4C700CE43AE /* QTKit.framework */,
+				BCE7BC691DD1C4B400CE43AE /* CoreVideo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BCF8ED371D9EB0B2005074F4 /* Docs */ = {
+			isa = PBXGroup;
+			children = (
+				BCF8ED381D9EB0DE005074F4 /* KudanImageTrack.dox */,
+				BCF8ED3A1D9EBC06005074F4 /* KudanImageTrackDocsStyle.css */,
+				BCF8ED3B1D9EBEA8005074F4 /* KudanImageTrack.html */,
+			);
+			path = Docs;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		BC71E8FF1D9141A5004DCA90 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2D5EE4521E36A1900174F4F /* Marker.h in Headers */,
+				E2D5EE4221E36A1900174F4F /* PlanarTracker.h in Headers */,
+				E2D5EE4B21E36A1900174F4F /* ImagePoints.h in Headers */,
+				E2D5EE3B21E36A1900174F4F /* Helper.h in Headers */,
+				E2D5EE3821E36A1900174F4F /* Homography.h in Headers */,
+				E2D5EE4621E36A1900174F4F /* OpticalFlowTracker.h in Headers */,
+				E2D5EE4021E36A1900174F4F /* DoubleExponentialSmoothing.h in Headers */,
+				E2D5EE3921E36A1900174F4F /* PoseEstimator.h in Headers */,
+				E2D5EE3721E36A1900174F4F /* DebugState.h in Headers */,
+				BCE7BC601DD1C3F300CE43AE /* UnitTestUtils.hpp in Headers */,
+				E2D5EE5821E36A1900174F4F /* HomographyFinding.hpp in Headers */,
+				E2D5EE4821E36A1900174F4F /* Profiler.hpp in Headers */,
+				E2D5EE0521E369FB00174F4F /* IntelSSE_x86.hpp in Headers */,
+				E2D5EE3C21E36A1900174F4F /* CameraCalibration.h in Headers */,
+				E2D5EE4321E36A1900174F4F /* MarkerDetectorResult.hpp in Headers */,
+				E2D5EE5721E36A1900174F4F /* Geometry.hpp in Headers */,
+				E2D5EE3E21E36A1900174F4F /* TrackedMarker.hpp in Headers */,
+				E2D5EE3321E36A1900174F4F /* MarkerDetector.h in Headers */,
+				E2D5EE5021E36A1900174F4F /* PatchMatcher.h in Headers */,
+				E2D5EE4421E36A1900174F4F /* Macros.h in Headers */,
+				E2D5EDFF21E369E900174F4F /* KdImageTrack.h in Headers */,
+				E2D5EE5621E36A1900174F4F /* ImageProcessing.hpp in Headers */,
+				E2D5EE3F21E36A1900174F4F /* Logging.hpp in Headers */,
+				E2D5EE3D21E36A1900174F4F /* MarkerImage.hpp in Headers */,
+				E2D5EE3A21E36A1900174F4F /* CameraImage.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXLegacyTarget section */
+		BCF8ED331D9E9D8C005074F4 /* KdImageTrack-Docs */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = $PROJECT_DIR/Docs/KudanImageTrack.dox;
+			buildConfigurationList = BCF8ED361D9E9D8C005074F4 /* Build configuration list for PBXLegacyTarget "KdImageTrack-Docs" */;
+			buildPhases = (
+			);
+			buildToolPath = "$(PROJECT_DIR)/Libraries/Doxygen/bin/doxygen";
+			buildWorkingDirectory = "";
+			dependencies = (
+			);
+			name = "KdImageTrack-Docs";
+			passBuildSettingsInEnvironment = 1;
+			productName = "KudanCV-Docs";
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXNativeTarget section */
+		BC71E9001D9141A5004DCA90 /* KdImageTrack-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BC71E9021D9141A5004DCA90 /* Build configuration list for PBXNativeTarget "KdImageTrack-macOS" */;
+			buildPhases = (
+				BC71E8FD1D9141A5004DCA90 /* Sources */,
+				BC71E8FE1D9141A5004DCA90 /* Frameworks */,
+				BC71E8FF1D9141A5004DCA90 /* Headers */,
+				BC22BFB51E706E3500E697C5 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BC00F9921E6D505F00190B80 /* PBXTargetDependency */,
+			);
+			name = "KdImageTrack-macOS";
+			productName = "KudanCV-OSX";
+			productReference = BC71E9011D9141A5004DCA90 /* libKdImageTrack-macOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		BC71E92D1D914995004DCA90 /* Demo-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BC71E9321D914995004DCA90 /* Build configuration list for PBXNativeTarget "Demo-macOS" */;
+			buildPhases = (
+				BC71E92A1D914995004DCA90 /* Sources */,
+				BC71E92B1D914995004DCA90 /* Frameworks */,
+				BC71E92C1D914995004DCA90 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BC71E95F1D92F2F8004DCA90 /* PBXTargetDependency */,
+			);
+			name = "Demo-macOS";
+			productName = "Demo-OSX";
+			productReference = BC71E92E1D914995004DCA90 /* Demo-macOS */;
+			productType = "com.apple.product-type.tool";
+		};
+		BC71E93A1D91505B004DCA90 /* IntegrationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BC71E9411D91505B004DCA90 /* Build configuration list for PBXNativeTarget "IntegrationTests" */;
+			buildPhases = (
+				BC71E9371D91505B004DCA90 /* Sources */,
+				BC71E9381D91505B004DCA90 /* Frameworks */,
+				BC71E9391D91505B004DCA90 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BC71E9441D915344004DCA90 /* PBXTargetDependency */,
+			);
+			name = IntegrationTests;
+			productName = CatchTests;
+			productReference = BC71E93B1D91505B004DCA90 /* IntegrationTests */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		529C75321B285FD9003C38C7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "John Williams";
+				TargetAttributes = {
+					BC71E9001D9141A5004DCA90 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					BC71E92D1D914995004DCA90 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					BC71E93A1D91505B004DCA90 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					BCF8ED331D9E9D8C005074F4 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 529C75351B285FD9003C38C7 /* Build configuration list for PBXProject "KdImageTrack" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 529C75311B285FD9003C38C7;
+			productRefGroup = 529C753C1B285FD9003C38C7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BC71E9001D9141A5004DCA90 /* KdImageTrack-macOS */,
+				BC71E92D1D914995004DCA90 /* Demo-macOS */,
+				BC71E93A1D91505B004DCA90 /* IntegrationTests */,
+				BCF8ED331D9E9D8C005074F4 /* KdImageTrack-Docs */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BC22BFB51E706E3500E697C5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\nif [ -d \"build\" ]; then\nrm -r build\nfi\n\nmkdir build\nmkdir build/${PROJECT_NAME}\nmkdir build/${PROJECT_NAME}/lib\nmkdir build/${PROJECT_NAME}/lib/macOS\n\ncp ${BUILD_DIR}/${CONFIGURATION}/lib${PROJECT_NAME}-macOS.a build/${PROJECT_NAME}/lib/macOS/lib${PROJECT_NAME}.a\n\nif [ -f ${BUILD_DIR}/${CONFIGURATION}-iphoneos/lib${PROJECT_NAME}-iOS.a ]; then\n    mkdir build/${PROJECT_NAME}/lib/iOS\n    cp ${BUILD_DIR}/${CONFIGURATION}-iphoneos/lib${PROJECT_NAME}-iOS.a build/${PROJECT_NAME}/lib/iOS/lib${PROJECT_NAME}.a\nfi\n\nmkdir build/${PROJECT_NAME}/include\ncp ${PROJECT_NAME}/${PROJECT_NAME}.h build/${PROJECT_NAME}/include/${PROJECT_NAME}.h\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BC71E8FD1D9141A5004DCA90 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2D5EE4121E36A1900174F4F /* MarkerDetectorResult.cpp in Sources */,
+				E2D5EE5321E36A1900174F4F /* Homography.cpp in Sources */,
+				E2D5EE3221E36A1900174F4F /* CameraImage.cpp in Sources */,
+				E2D5EE4F21E36A1900174F4F /* ImagePoints.cpp in Sources */,
+				E2D5EE4721E36A1900174F4F /* OpticalFlowTracker.cpp in Sources */,
+				E2D5EE4921E36A1900174F4F /* HomographyFinding.cpp in Sources */,
+				E2D5EE0721E369FB00174F4F /* IntelSSE_x86.cpp in Sources */,
+				E2D5EE5221E36A1900174F4F /* TrackedMarker.cpp in Sources */,
+				E2D5EE0021E369E900174F4F /* KdImageTrack.cpp in Sources */,
+				E2D5EE0621E369FB00174F4F /* asm32.S in Sources */,
+				E2D5EE3521E36A1900174F4F /* ImageProcessing.cpp in Sources */,
+				E2D5EE5521E36A1900174F4F /* DoubleExponentialSmoothing.cpp in Sources */,
+				E2D5EE5421E36A1900174F4F /* Helper.cpp in Sources */,
+				E2D5EE4A21E36A1900174F4F /* PoseEstimator.cpp in Sources */,
+				E2D5EE5121E36A1900174F4F /* PlanarTracker.cpp in Sources */,
+				E2D5EE4C21E36A1900174F4F /* PatchMatcher.cpp in Sources */,
+				E2D5EE3421E36A1900174F4F /* Geometry.cpp in Sources */,
+				E2D5EE0821E369FB00174F4F /* asm64.S in Sources */,
+				E2D5EE3621E36A1900174F4F /* Logging.cpp in Sources */,
+				E2D5EE3121E36A1900174F4F /* Profiler.cpp in Sources */,
+				E2D5EE4D21E36A1900174F4F /* Marker.cpp in Sources */,
+				E2D5EE4E21E36A1900174F4F /* MarkerDetector.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC71E92A1D914995004DCA90 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCB60F4D1DD1DA7D006C7892 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC71E9371D91505B004DCA90 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCE7BC671DD1C41E00CE43AE /* UnitTestUtils.cpp in Sources */,
+				BCE7BC631DD1C41E00CE43AE /* Test_KudanCameraParameters.cpp in Sources */,
+				BCE7BC611DD1C41E00CE43AE /* main.cpp in Sources */,
+				BCE7BC661DD1C41E00CE43AE /* Test_KudanMaths.cpp in Sources */,
+				BCE7BC651DD1C41E00CE43AE /* Test_KudanImageTracker.cpp in Sources */,
+				BCE7BC641DD1C41E00CE43AE /* Test_KudanImageTrackable.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BC00F9921E6D505F00190B80 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BCF8ED331D9E9D8C005074F4 /* KdImageTrack-Docs */;
+			targetProxy = BC00F9911E6D505F00190B80 /* PBXContainerItemProxy */;
+		};
+		BC71E9441D915344004DCA90 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BC71E9001D9141A5004DCA90 /* KdImageTrack-macOS */;
+			targetProxy = BC71E9431D915344004DCA90 /* PBXContainerItemProxy */;
+		};
+		BC71E95F1D92F2F8004DCA90 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BC71E9001D9141A5004DCA90 /* KdImageTrack-macOS */;
+			targetProxy = BC71E95E1D92F2F8004DCA90 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		529C754F1B285FD9003C38C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		529C75501B285FD9003C38C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		BC71E9031D9141A5004DCA90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_X86_VECTOR_INSTRUCTIONS = avx;
+				CODE_SIGN_IDENTITY = "-";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				EXECUTABLE_PREFIX = lib;
+				GENERATE_MASTER_OBJECT_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/Libraries/OpenCV/include",
+					"$(PROJECT_DIR)/Libraries/GLM/include",
+				);
+				IMAGE_LIBS = "$(PROJECT_DIR)/Libraries/Image/lib/macOS";
+				LIBRARY_SEARCH_PATHS = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OPENCV_LIBS = "$(PROJECT_DIR)/Libraries/OpenCV/lib/macOS";
+				OTHER_LDFLAGS = "";
+				PRELINK_LIBS = "$(IMAGE_LIBS)/liblibjpeg.a $(IMAGE_LIBS)/liblibpng.a $(IMAGE_LIBS)/liblibtiff.a $(IMAGE_LIBS)/liblibjasper.a $(IMAGE_LIBS)/libIlmImf.a $(IMAGE_LIBS)/liblibwebp.a $(OPENCV_LIBS)/libopencv_core.a $(OPENCV_LIBS)/libopencv_flann.a $(OPENCV_LIBS)/libopencv_hal.a $(OPENCV_LIBS)/libopencv_imgcodecs.a $(OPENCV_LIBS)/libopencv_video.a $(OPENCV_LIBS)/libopencv_videoio.a $(OPENCV_LIBS)/libopencv_calib3d.a $(OPENCV_LIBS)/libopencv_highgui.a $(OPENCV_LIBS)/libopencv_imgproc.a $(OPENCV_LIBS)/libopencv_imgcodecs.a $(OPENCV_LIBS)/libopencv_features2d.a $(OPENCV_LIBS)/libopencv_ml.a $(OPENCV_LIBS)/libopencv_objdetect.a";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				WARNING_CFLAGS = "";
+			};
+			name = Debug;
+		};
+		BC71E9041D9141A5004DCA90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_X86_VECTOR_INSTRUCTIONS = avx;
+				CODE_SIGN_IDENTITY = "-";
+				DEPLOYMENT_POSTPROCESSING = YES;
+				EXECUTABLE_PREFIX = lib;
+				GENERATE_MASTER_OBJECT_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/Libraries/OpenCV/include",
+					"$(PROJECT_DIR)/Libraries/GLM/include",
+				);
+				IMAGE_LIBS = "$(PROJECT_DIR)/Libraries/Image/lib/macOS";
+				LIBRARY_SEARCH_PATHS = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OPENCV_LIBS = "$(PROJECT_DIR)/Libraries/OpenCV/lib/macOS";
+				OTHER_LDFLAGS = "";
+				PRELINK_LIBS = "$(IMAGE_LIBS)/liblibjpeg.a $(IMAGE_LIBS)/liblibpng.a $(IMAGE_LIBS)/liblibtiff.a $(IMAGE_LIBS)/liblibjasper.a $(IMAGE_LIBS)/libIlmImf.a $(IMAGE_LIBS)/liblibwebp.a $(OPENCV_LIBS)/libopencv_core.a $(OPENCV_LIBS)/libopencv_flann.a $(OPENCV_LIBS)/libopencv_hal.a $(OPENCV_LIBS)/libopencv_imgcodecs.a $(OPENCV_LIBS)/libopencv_video.a $(OPENCV_LIBS)/libopencv_videoio.a $(OPENCV_LIBS)/libopencv_calib3d.a $(OPENCV_LIBS)/libopencv_highgui.a $(OPENCV_LIBS)/libopencv_imgproc.a $(OPENCV_LIBS)/libopencv_imgcodecs.a $(OPENCV_LIBS)/libopencv_features2d.a $(OPENCV_LIBS)/libopencv_ml.a $(OPENCV_LIBS)/libopencv_objdetect.a";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				WARNING_CFLAGS = "";
+			};
+			name = Release;
+		};
+		BC71E9331D914995004DCA90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_X86_VECTOR_INSTRUCTIONS = avx;
+				CODE_SIGN_IDENTITY = "-";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/Libraries/OpenCV/include";
+				INFOPLIST_FILE = "$(SRCROOT)/Demo-macOS/Info.plist";
+				"INFOPLIST_FILE[sdk=*]" = "";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/Libraries/OpenCV/lib/macOS";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				OTHER_LDFLAGS = (
+					"-lKdImageTrack-macOS",
+					"-lz",
+					"-lopencv_highgui",
+					"-lopencv_imgproc",
+					"-lopencv_videoio",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		BC71E9341D914995004DCA90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_X86_VECTOR_INSTRUCTIONS = avx;
+				CODE_SIGN_IDENTITY = "-";
+				GCC_OPTIMIZATION_LEVEL = s;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/Libraries/OpenCV/include";
+				INFOPLIST_FILE = "$(SRCROOT)/Demo-macOS/Info.plist";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/Libraries/OpenCV/lib/macOS";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				OTHER_LDFLAGS = (
+					"-lKdImageTrack-macOS",
+					"-lz",
+					"-lopencv_highgui",
+					"-lopencv_imgproc",
+					"-lopencv_videoio",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		BC71E93F1D91505B004DCA90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CODE_SIGN_IDENTITY = "-";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/Libraries/OpenCV/include",
+					"$(PROJECT_DIR)/Libraries/Catch/include",
+				);
+				LIBRARY_SEARCH_PATHS = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				OTHER_LDFLAGS = (
+					"-lKdImageTrack-macOS",
+					"-lz",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		BC71E9401D91505B004DCA90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CODE_SIGN_IDENTITY = "-";
+				GCC_PREPROCESSOR_DEFINITIONS = "";
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/Libraries/OpenCV/include",
+					"$(PROJECT_DIR)/Libraries/Catch/include",
+				);
+				LIBRARY_SEARCH_PATHS = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				OTHER_LDFLAGS = (
+					"-lKdImageTrack-macOS",
+					"-lz",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		BCF8ED341D9E9D8C005074F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				DEBUGGING_SYMBOLS = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BCF8ED351D9E9D8C005074F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		529C75351B285FD9003C38C7 /* Build configuration list for PBXProject "KdImageTrack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				529C754F1B285FD9003C38C7 /* Debug */,
+				529C75501B285FD9003C38C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BC71E9021D9141A5004DCA90 /* Build configuration list for PBXNativeTarget "KdImageTrack-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC71E9031D9141A5004DCA90 /* Debug */,
+				BC71E9041D9141A5004DCA90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BC71E9321D914995004DCA90 /* Build configuration list for PBXNativeTarget "Demo-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC71E9331D914995004DCA90 /* Debug */,
+				BC71E9341D914995004DCA90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BC71E9411D91505B004DCA90 /* Build configuration list for PBXNativeTarget "IntegrationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC71E93F1D91505B004DCA90 /* Debug */,
+				BC71E9401D91505B004DCA90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BCF8ED361D9E9D8C005074F4 /* Build configuration list for PBXLegacyTarget "KdImageTrack-Docs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCF8ED341D9E9D8C005074F4 /* Debug */,
+				BCF8ED351D9E9D8C005074F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 529C75321B285FD9003C38C7 /* Project object */;
+}

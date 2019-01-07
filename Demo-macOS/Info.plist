@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Need access to microphone to run demo. </string>
+	<key>NSCameraUsageDescription</key>
+	<string>Need access to webcam to run demo. </string>
+</dict>
+</plist>
