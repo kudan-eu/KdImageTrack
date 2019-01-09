@@ -2,8 +2,9 @@
 
 The Kudan C++ library for the detection and tracking of markers
 
-KdImageTrack is released under GPL V3 see KdImageTrack-gpl.txt for details. 
-KdImageTrack dependencies and their licenses are listed under KdImageTrack-dependencies.txt. 
+KdImageTrack is released under GPL V3 see KdImageTrack-gpl.txt for details.   
+KdImageTrack dependencies and their licenses are listed under KdImageTrack-dependencies.txt.   
+For a closed-source version of KdImageTrack for commercial purposes, please contact to hello@kudan.eu.
 
 ## Getting Started
 
